@@ -1,0 +1,9 @@
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  background: url("../img/1540091546646.jpg") center top;
+  background-size: 100%;
+}
