@@ -1,9 +1,10 @@
 @import "config";
 @import "home";
+@import  "menu";
 
 body {
-    background-color: $primary-color;
-    color: #fff;
+    background-color: ($primary-color);
+    color: set-text-color($primary-color);
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, verdana, sans-serif;
     line-height: 1;
@@ -25,14 +26,15 @@ header{
 
 main {
     height: 100%;
-    width: 100;
+    width: 100%;
     .social-icons {
         position: fixed;
         bottom: 1rem;
         left: 1rem;
 
     a {
-        padding: 0.4rem;
+        padding: 0.4rem; 
+        @include transition-ease;
 
         &:hover{
           color: $secondary-color;  
@@ -47,4 +49,5 @@ footer{
     right: 1rem;
     text-align: right;
     padding: 1rem;
+    color: set-text-color($primary-color);
 }
