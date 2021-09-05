@@ -79,5 +79,32 @@
             &.open{
                 transform: translateY(0);
             }
+            &_item {
+              @include transition-ease;
+            }
+            &.open {
+                transform: translate(0);
+            }
+            &.active > a {
+                color: $secondary-color;
+            }
+            &_link {
+                display: inline-block;
+                font-size: 2rem;
+                text-decoration: uppercase;
+                padding: 2rem 0;
+                font-weight: 300;
+                @include transition-ease;
+    
+                &:hover {
+                   color: $secondary-color; 
+                }
         }
     }
+}
+@for $i from 1 through 4 {
+    .menu-nav_item:nth-child(#{$i}) {
+        transition-delay: ($i * 0.1s) + 0.15s;
+    }
+}
+  
