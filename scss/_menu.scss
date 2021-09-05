@@ -8,7 +8,7 @@
     cursor: pointer;
     @include transition-ease;
 
-    &_burger{
+    &_burger {
         position: absolute;
         right: 0;
         top: 0.5rem;
@@ -18,7 +18,7 @@
         @include transition-ease;
    
         &::before {
-            content:"";
+            content: '';
             position: absolute;
             top: -8px;
             width: 28px;
@@ -27,7 +27,7 @@
             @include transition-ease;
         }
         &::after {
-            content: "";
+            content: '';
             position: absolute;
             top: 8px;
             width: 20px;
@@ -70,5 +70,14 @@
             justify-content: center;
             height: 100vh;
             overflow: hidden;
+            background: $primary-color;
+            list-style: none;
+            padding-right: 1rem;
+            transform: translateY(-100%);
+            @include transition-ease;
+
+            &.open{
+                transform: translateY(0);
+            }
         }
     }
